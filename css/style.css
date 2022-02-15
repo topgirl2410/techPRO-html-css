@@ -15,6 +15,24 @@
     --fuenteSecundaria: 'Lato', sans-serif;
 }
 
+html {
+    box-sizing: border-box; 
+    font-size: 62.5%; /** 1rem = 10px**/
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
 body {
     font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
 }
+
+/** Globales **/
+
