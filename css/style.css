@@ -189,7 +189,21 @@ img {
     background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
     background-position: right;
     background-repeat: repeat, no-repeat;
-    background-size: 100%, 120rem;
+    background-size: 100%, 110rem;
+}
+
+@media (min-width: 768px) {
+    .sobre-tech {
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 0%), url(../img/imagen-mujer.jpg);
+        background-repeat: repeat, no-repeat;
+    }
+}
+
+@media (min-width: 1600px) {
+    .sobre-tech {
+        background-size: 100%, 210rem;
+    }
+
 }
 
 .sobre-tech-grid {
@@ -198,12 +212,31 @@ img {
     row-gap: var(--separacion);
 }
 
+@media (min-width: 768px) {
+    .sobre-tech-grid {
+        grid-template-rows: unset;
+        row-gap: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        padding: calc(var(--separacion) * 2) 0;
+    }
+}
+
+
 .texto-sobre-tech {
     grid-row: 2 / 3;
     color: var(--blanco);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-bottom: var(--separacion);
+
+}
+
+@media (min-width: 768px) {
+    .texto-sobre-tech {
+        padding-bottom: 0;
+    }
 }
 
 .texto-sobre-tech h2 {
@@ -213,5 +246,65 @@ img {
 .texto-sobre-tech p {
     font-size: 2rem;
     line-height: 2;
+}
 
+
+/** Modelos **/
+
+.modelos {
+    padding: var(--separacion) 0;
+}
+
+.header-modelos {
+    font-size: 6rem;
+    margin-bottom: var(--separacion);
+}
+
+.listado-modelos {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.modelo {
+    background-color: var(--grisClaro);
+    margin-bottom: 2rem;
+    padding-left: 4rem;
+    color: var(--primario);
+    border-radius: 2rem;
+    min-height: 20rem;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 15rem;
+}
+
+.modelo h3 {
+    font-size: 2.4rem;
+    line-height: 0;
+}
+
+.modelo .precio {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.modelo:first-of-type {
+    margin-bottom: 0;
+}
+
+.modelo-x {
+    background-image: url(../img/modelo-x.svg);
+}
+
+.modelo-y {
+    background-image: url(../img/modelo-y.svg);
+}
+
+.modelo-z {
+    background-image: url(../img/modelo-z.svg);
+    background-color: var(--primario);
+    color: var(--blanco)
+}
+
+.modelo-z .precio {
+    font-size: 6rem;
 }
